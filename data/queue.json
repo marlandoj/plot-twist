@@ -1,0 +1,601 @@
+{
+  "generatedFrom": "2026-11-12",
+  "gates": {
+    "perfectExists": "optimum == number of wishes and at least 1 perfect town",
+    "threePerfect": "at least 3 distinct perfect towns",
+    "greedyBand": "greedy town scores between 60% and 85% of optimum",
+    "weekdayRamp": [
+      {
+        "min": 200,
+        "max": null
+      },
+      {
+        "min": 100,
+        "max": null
+      },
+      {
+        "min": 30,
+        "max": 3000
+      },
+      {
+        "min": 15,
+        "max": 1500
+      },
+      {
+        "min": 8,
+        "max": 800
+      },
+      {
+        "min": 3,
+        "max": 400
+      },
+      {
+        "min": 3,
+        "max": 150
+      }
+    ],
+    "maxRolls": 400
+  },
+  "days": [
+    {
+      "postData": {
+        "game": "plot-twist",
+        "date": "2026-11-12",
+        "roll": 20
+      },
+      "stats": {
+        "date": "2026-11-12",
+        "weekday": "Thursday",
+        "difficulty": 3,
+        "roll": 20,
+        "wishes": 7,
+        "optimum": 7,
+        "perfectCount": 190,
+        "greedyScore": 5,
+        "greedyRatio": 0.714,
+        "solverNodes": 3913,
+        "rejectedRolls": 20,
+        "rejections": {
+          "perfectExists": 5,
+          "threePerfect": 0,
+          "greedyBand": 15,
+          "weekdayRamp": 0
+        },
+        "gates": {
+          "perfectExists": true,
+          "threePerfect": true,
+          "greedyBand": true,
+          "weekdayRamp": true
+        },
+        "exampleTown": [
+          0,
+          5,
+          1,
+          7,
+          18
+        ]
+      },
+      "generationMs": 408
+    },
+    {
+      "postData": {
+        "game": "plot-twist",
+        "date": "2026-11-13",
+        "roll": 6
+      },
+      "stats": {
+        "date": "2026-11-13",
+        "weekday": "Friday",
+        "difficulty": 4,
+        "roll": 6,
+        "wishes": 8,
+        "optimum": 8,
+        "perfectCount": 57,
+        "greedyScore": 6,
+        "greedyRatio": 0.75,
+        "solverNodes": 36291,
+        "rejectedRolls": 6,
+        "rejections": {
+          "perfectExists": 2,
+          "threePerfect": 0,
+          "greedyBand": 4,
+          "weekdayRamp": 0
+        },
+        "gates": {
+          "perfectExists": true,
+          "threePerfect": true,
+          "greedyBand": true,
+          "weekdayRamp": true
+        },
+        "exampleTown": [
+          12,
+          0,
+          7,
+          18,
+          6
+        ]
+      },
+      "generationMs": 73
+    },
+    {
+      "postData": {
+        "game": "plot-twist",
+        "date": "2026-11-14",
+        "roll": 1
+      },
+      "stats": {
+        "date": "2026-11-14",
+        "weekday": "Saturday",
+        "difficulty": 5,
+        "roll": 1,
+        "wishes": 9,
+        "optimum": 9,
+        "perfectCount": 5,
+        "greedyScore": 6,
+        "greedyRatio": 0.667,
+        "solverNodes": 2702,
+        "rejectedRolls": 1,
+        "rejections": {
+          "perfectExists": 0,
+          "threePerfect": 0,
+          "greedyBand": 1,
+          "weekdayRamp": 0
+        },
+        "gates": {
+          "perfectExists": true,
+          "threePerfect": true,
+          "greedyBand": true,
+          "weekdayRamp": true
+        },
+        "exampleTown": [
+          18,
+          9,
+          7,
+          21,
+          0
+        ]
+      },
+      "generationMs": 3
+    },
+    {
+      "postData": {
+        "game": "plot-twist",
+        "date": "2026-11-15",
+        "roll": 11
+      },
+      "stats": {
+        "date": "2026-11-15",
+        "weekday": "Sunday",
+        "difficulty": 6,
+        "roll": 11,
+        "wishes": 9,
+        "optimum": 9,
+        "perfectCount": 30,
+        "greedyScore": 7,
+        "greedyRatio": 0.778,
+        "solverNodes": 2879,
+        "rejectedRolls": 11,
+        "rejections": {
+          "perfectExists": 6,
+          "threePerfect": 0,
+          "greedyBand": 5,
+          "weekdayRamp": 0
+        },
+        "gates": {
+          "perfectExists": true,
+          "threePerfect": true,
+          "greedyBand": true,
+          "weekdayRamp": true
+        },
+        "exampleTown": [
+          22,
+          13,
+          19,
+          4,
+          8
+        ]
+      },
+      "generationMs": 292
+    },
+    {
+      "postData": {
+        "game": "plot-twist",
+        "date": "2026-11-16",
+        "roll": 2
+      },
+      "stats": {
+        "date": "2026-11-16",
+        "weekday": "Monday",
+        "difficulty": 0,
+        "roll": 2,
+        "wishes": 6,
+        "optimum": 6,
+        "perfectCount": 3240,
+        "greedyScore": 5,
+        "greedyRatio": 0.833,
+        "solverNodes": 338158,
+        "rejectedRolls": 2,
+        "rejections": {
+          "perfectExists": 0,
+          "threePerfect": 0,
+          "greedyBand": 1,
+          "weekdayRamp": 1
+        },
+        "gates": {
+          "perfectExists": true,
+          "threePerfect": true,
+          "greedyBand": true,
+          "weekdayRamp": true
+        },
+        "exampleTown": [
+          18,
+          0,
+          8,
+          19,
+          2
+        ]
+      },
+      "generationMs": 128
+    },
+    {
+      "postData": {
+        "game": "plot-twist",
+        "date": "2026-11-17",
+        "roll": 2
+      },
+      "stats": {
+        "date": "2026-11-17",
+        "weekday": "Tuesday",
+        "difficulty": 1,
+        "roll": 2,
+        "wishes": 6,
+        "optimum": 6,
+        "perfectCount": 429,
+        "greedyScore": 5,
+        "greedyRatio": 0.833,
+        "solverNodes": 5705,
+        "rejectedRolls": 2,
+        "rejections": {
+          "perfectExists": 0,
+          "threePerfect": 0,
+          "greedyBand": 1,
+          "weekdayRamp": 1
+        },
+        "gates": {
+          "perfectExists": true,
+          "threePerfect": true,
+          "greedyBand": true,
+          "weekdayRamp": true
+        },
+        "exampleTown": [
+          18,
+          9,
+          15,
+          1,
+          0
+        ]
+      },
+      "generationMs": 13
+    },
+    {
+      "postData": {
+        "game": "plot-twist",
+        "date": "2026-11-18",
+        "roll": 5
+      },
+      "stats": {
+        "date": "2026-11-18",
+        "weekday": "Wednesday",
+        "difficulty": 2,
+        "roll": 5,
+        "wishes": 7,
+        "optimum": 7,
+        "perfectCount": 1013,
+        "greedyScore": 5,
+        "greedyRatio": 0.714,
+        "solverNodes": 114448,
+        "rejectedRolls": 5,
+        "rejections": {
+          "perfectExists": 2,
+          "threePerfect": 0,
+          "greedyBand": 3,
+          "weekdayRamp": 0
+        },
+        "gates": {
+          "perfectExists": true,
+          "threePerfect": true,
+          "greedyBand": true,
+          "weekdayRamp": true
+        },
+        "exampleTown": [
+          0,
+          9,
+          10,
+          5,
+          4
+        ]
+      },
+      "generationMs": 173
+    },
+    {
+      "postData": {
+        "game": "plot-twist",
+        "date": "2026-11-19",
+        "roll": 3
+      },
+      "stats": {
+        "date": "2026-11-19",
+        "weekday": "Thursday",
+        "difficulty": 3,
+        "roll": 3,
+        "wishes": 7,
+        "optimum": 7,
+        "perfectCount": 44,
+        "greedyScore": 5,
+        "greedyRatio": 0.714,
+        "solverNodes": 18119,
+        "rejectedRolls": 3,
+        "rejections": {
+          "perfectExists": 1,
+          "threePerfect": 0,
+          "greedyBand": 2,
+          "weekdayRamp": 0
+        },
+        "gates": {
+          "perfectExists": true,
+          "threePerfect": true,
+          "greedyBand": true,
+          "weekdayRamp": true
+        },
+        "exampleTown": [
+          19,
+          1,
+          7,
+          22,
+          23
+        ]
+      },
+      "generationMs": 20
+    },
+    {
+      "postData": {
+        "game": "plot-twist",
+        "date": "2026-11-20",
+        "roll": 0
+      },
+      "stats": {
+        "date": "2026-11-20",
+        "weekday": "Friday",
+        "difficulty": 4,
+        "roll": 0,
+        "wishes": 8,
+        "optimum": 8,
+        "perfectCount": 64,
+        "greedyScore": 6,
+        "greedyRatio": 0.75,
+        "solverNodes": 8578,
+        "rejectedRolls": 0,
+        "rejections": {
+          "perfectExists": 0,
+          "threePerfect": 0,
+          "greedyBand": 0,
+          "weekdayRamp": 0
+        },
+        "gates": {
+          "perfectExists": true,
+          "threePerfect": true,
+          "greedyBand": true,
+          "weekdayRamp": true
+        },
+        "exampleTown": [
+          4,
+          22,
+          0,
+          10,
+          7
+        ]
+      },
+      "generationMs": 4
+    },
+    {
+      "postData": {
+        "game": "plot-twist",
+        "date": "2026-11-21",
+        "roll": 5
+      },
+      "stats": {
+        "date": "2026-11-21",
+        "weekday": "Saturday",
+        "difficulty": 5,
+        "roll": 5,
+        "wishes": 9,
+        "optimum": 9,
+        "perfectCount": 5,
+        "greedyScore": 7,
+        "greedyRatio": 0.778,
+        "solverNodes": 977,
+        "rejectedRolls": 5,
+        "rejections": {
+          "perfectExists": 4,
+          "threePerfect": 0,
+          "greedyBand": 1,
+          "weekdayRamp": 0
+        },
+        "gates": {
+          "perfectExists": true,
+          "threePerfect": true,
+          "greedyBand": true,
+          "weekdayRamp": true
+        },
+        "exampleTown": [
+          19,
+          18,
+          13,
+          1,
+          8
+        ]
+      },
+      "generationMs": 34
+    },
+    {
+      "postData": {
+        "game": "plot-twist",
+        "date": "2026-11-22",
+        "roll": 8
+      },
+      "stats": {
+        "date": "2026-11-22",
+        "weekday": "Sunday",
+        "difficulty": 6,
+        "roll": 8,
+        "wishes": 9,
+        "optimum": 9,
+        "perfectCount": 131,
+        "greedyScore": 7,
+        "greedyRatio": 0.778,
+        "solverNodes": 40521,
+        "rejectedRolls": 8,
+        "rejections": {
+          "perfectExists": 3,
+          "threePerfect": 0,
+          "greedyBand": 5,
+          "weekdayRamp": 0
+        },
+        "gates": {
+          "perfectExists": true,
+          "threePerfect": true,
+          "greedyBand": true,
+          "weekdayRamp": true
+        },
+        "exampleTown": [
+          11,
+          0,
+          5,
+          17,
+          23
+        ]
+      },
+      "generationMs": 1587
+    },
+    {
+      "postData": {
+        "game": "plot-twist",
+        "date": "2026-11-23",
+        "roll": 0
+      },
+      "stats": {
+        "date": "2026-11-23",
+        "weekday": "Monday",
+        "difficulty": 0,
+        "roll": 0,
+        "wishes": 6,
+        "optimum": 6,
+        "perfectCount": 660,
+        "greedyScore": 5,
+        "greedyRatio": 0.833,
+        "solverNodes": 5809,
+        "rejectedRolls": 0,
+        "rejections": {
+          "perfectExists": 0,
+          "threePerfect": 0,
+          "greedyBand": 0,
+          "weekdayRamp": 0
+        },
+        "gates": {
+          "perfectExists": true,
+          "threePerfect": true,
+          "greedyBand": true,
+          "weekdayRamp": true
+        },
+        "exampleTown": [
+          18,
+          0,
+          21,
+          22,
+          2
+        ]
+      },
+      "generationMs": 2
+    },
+    {
+      "postData": {
+        "game": "plot-twist",
+        "date": "2026-11-24",
+        "roll": 2
+      },
+      "stats": {
+        "date": "2026-11-24",
+        "weekday": "Tuesday",
+        "difficulty": 1,
+        "roll": 2,
+        "wishes": 6,
+        "optimum": 6,
+        "perfectCount": 404,
+        "greedyScore": 5,
+        "greedyRatio": 0.833,
+        "solverNodes": 5775,
+        "rejectedRolls": 2,
+        "rejections": {
+          "perfectExists": 0,
+          "threePerfect": 0,
+          "greedyBand": 1,
+          "weekdayRamp": 1
+        },
+        "gates": {
+          "perfectExists": true,
+          "threePerfect": true,
+          "greedyBand": true,
+          "weekdayRamp": true
+        },
+        "exampleTown": [
+          0,
+          20,
+          18,
+          15,
+          5
+        ]
+      },
+      "generationMs": 14
+    },
+    {
+      "postData": {
+        "game": "plot-twist",
+        "date": "2026-11-25",
+        "roll": 8
+      },
+      "stats": {
+        "date": "2026-11-25",
+        "weekday": "Wednesday",
+        "difficulty": 2,
+        "roll": 8,
+        "wishes": 7,
+        "optimum": 7,
+        "perfectCount": 46,
+        "greedyScore": 5,
+        "greedyRatio": 0.714,
+        "solverNodes": 8131,
+        "rejectedRolls": 8,
+        "rejections": {
+          "perfectExists": 0,
+          "threePerfect": 0,
+          "greedyBand": 7,
+          "weekdayRamp": 1
+        },
+        "gates": {
+          "perfectExists": true,
+          "threePerfect": true,
+          "greedyBand": true,
+          "weekdayRamp": true
+        },
+        "exampleTown": [
+          7,
+          17,
+          23,
+          18,
+          12
+        ]
+      },
+      "generationMs": 517
+    }
+  ]
+}

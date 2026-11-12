@@ -1,3 +1,5 @@
+import type { DayPostData } from '../../shared/types';
+
 /**
  * The narrow slice of Devvit's server SDK the game logic uses. Production wires these
  * to `redis`, `reddit` and `telemetry` from @devvit; tests wire in-memory fakes.
@@ -36,7 +38,7 @@ export type RedditPort = {
   commentAsApp(postId: string, text: string, sticky: boolean): Promise<{ id: string }>;
   subscribeUser(): Promise<void>;
   setUserFlair(username: string, text: string, backgroundColor: string): Promise<void>;
-  createDayPost(title: string, postData: Record<string, unknown>): Promise<{ id: string; url: string }>;
+  createDayPost(title: string, postData: DayPostData): Promise<{ id: string; url: string }>;
   createTextPost(title: string, text: string): Promise<{ id: string; url: string }>;
   repliesTo(commentId: string): Promise<CommentRef[]>;
 };

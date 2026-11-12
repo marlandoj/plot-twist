@@ -1,9 +1,31 @@
 import { context, reddit, redis } from '@devvit/web/server';
 import { telemetry } from '@devvit/analytics/server/reddit';
+import type { JsonObject } from '@devvit/web/shared';
+import type { DayPostData } from '../../shared/types';
 import type { Ports, RedditPort, Store, TelemetryPort } from './ports';
 
 type T1 = `t1_${string}`;
 type T3 = `t3_${string}`;
+
+/** postData must be plain JSON; spell the shape out instead of casting. */
+const toJson = (d: DayPostData): JsonObject => {
+  const out: JsonObject = { game: d.game, date: d.date, roll: d.roll };
+  if (d.guest) {
+    out.guest = {
+      id: d.guest.id,
+      name: d.guest.name,
+      building: d.guest.building,
+      creditedTo: d.guest.creditedTo,
+      wishes: d.guest.wishes.map((w) => {
+        const wish: JsonObject = { type: w.type };
+        if (w.other) wish.other = w.other;
+        if (w.landmark) wish.landmark = w.landmark;
+        return wish;
+      }),
+    };
+  }
+  return out;
+};
 
 const store: Store = {
   get: (k) => redis.get(k),
@@ -44,7 +66,7 @@ const redditPort: RedditPort = {
   createDayPost: async (title, postData) => {
     const post = await reddit.submitCustomPost({
       title,
-      postData: postData as Record<string, string | number | boolean | object>,
+      postData: toJson(postData),
       textFallback: { text: 'Plot Twist is a daily tiny-town puzzle. Open this post on new Reddit or the app to play.' },
     });
     return { id: post.id, url: post.url };
