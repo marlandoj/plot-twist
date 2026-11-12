@@ -84,5 +84,7 @@ describe('the 12 wish rules', () => {
     const p = puzzle([w('corner', { a: 1 }), w('farFrom', { b: 2, a: 4 })]);
     expect(wishText(p.residents[1]!.wishes[0]!, p)).toBe('Put my bookshop on a corner.');
     expect(wishText(p.residents[4]!.wishes[0]!, p)).toBe('Keep the nightclub far from my baby.');
+    const q = puzzle([w('farFrom', { b: 2, a: 1 })]);
+    expect(wishText(q.residents[1]!.wishes[0]!, q)).toBe('Keep the nightclub far from my bookshop.');
   });
 });

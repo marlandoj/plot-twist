@@ -125,7 +125,7 @@ const lower = (s: string) => s.toLowerCase();
 export const PHRASINGS: Record<RuleType, readonly string[]> = {
   adjacent: ['I want to wake up next to the {B}.', 'Put my {A} right beside the {B}.'],
   notAdjacent: ['Keep the {B} away from my door.', "Don't put the {B} next to my {A}."],
-  farFrom: ['Keep the {B} far from my baby.', 'The {B} must be far, far away from me.'],
+  farFrom: ['Keep the {B} far from my {A}.', 'The {B} must be far, far away from me.'],
   corner: ['Put my {A} on a corner.', 'A corner lot for my {A}, please.'],
   edge: ['My {A} should be on the edge of town.', 'I like a view of the fields. Edge of town!'],
   inland: ['I want my {A} in the middle of things.', 'No edge lots for me. Put me inside town.'],
@@ -153,10 +153,17 @@ export const RULE_HINTS: Record<RuleType, string> = {
   mainStreet: `${STREET_NAMES[MAIN_STREET_ROW]} is the bottom row.`,
 };
 
+/** The nanny's wishes are about the baby. */
+const DAYCARE_PHRASINGS: Partial<Record<RuleType, string>> = {
+  farFrom: 'Keep the {B} far from my baby.',
+  notAdjacent: 'Keep the {B} away from my baby.',
+};
+
 export const wishText = (wish: Wish, puzzle: Puzzle): string => {
   const options = PHRASINGS[wish.type];
-  const template = options[wish.phrasing % options.length] ?? options[0]!;
   const a = puzzle.buildings[wish.a];
+  const template =
+    (a === 'daycare' ? DAYCARE_PHRASINGS[wish.type] : undefined) ?? options[wish.phrasing % options.length] ?? options[0]!;
   const b = wish.b === undefined ? undefined : puzzle.buildings[wish.b];
   return template
     .replace('{A}', a ? lower(BUILDING_BY_ID[a].name) : 'place')
