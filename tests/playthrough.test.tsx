@@ -122,7 +122,7 @@ describe('scripted playthrough of one full round', () => {
     expect(values.percentPerfect).toBe('67%');
     expect(values.percentile).toBe('100%');
     expect(values.time).toBe('1:30');
-    expect(values.streak).toBe('🔥 1');
+    expect(values.streak).toBe('1');
     expect(values.teaser).toMatch(/Tomorrow · Friday/);
     expect(values.snapshotWidth).toBe('300');
     expect(values.actions).toEqual(['Post my town', 'Subscribe']);

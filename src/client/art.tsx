@@ -239,3 +239,18 @@ export const Face = ({
     </svg>
   );
 };
+
+/** UI icons drawn in SVG so they never depend on an emoji font. */
+export const FlameIcon = ({ size = 16 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 100 100" aria-hidden="true" className="icon-svg">
+    <path d="M50 8 Q72 34 70 58 Q70 90 50 92 Q30 90 30 62 Q30 46 42 34 Q42 50 50 54 Q46 30 50 8 Z" fill="#E9634F" {...stroke} strokeWidth={6} />
+    <path d="M50 92 Q38 88 40 72 Q44 62 50 58 Q58 66 60 74 Q60 88 50 92 Z" fill="#F2C94C" />
+  </svg>
+);
+
+export const ClockIcon = ({ size = 16 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 100 100" aria-hidden="true" className="icon-svg">
+    <circle cx="50" cy="54" r="38" fill={PAPER} {...stroke} strokeWidth={8} />
+    <path d="M50 54 V32 M50 54 L64 62 M42 8 H58" fill="none" {...stroke} strokeWidth={8} />
+  </svg>
+);

@@ -64,7 +64,8 @@ button { font: inherit; color: inherit; }
 
 .game { max-width: 520px; margin: 0 auto; padding: 8px 10px 16px; }
 .top { display: flex; align-items: baseline; gap: 8px; }
-.clock { font-variant-numeric: tabular-nums; }
+.clock, .streak { display: inline-flex; align-items: center; gap: 3px; font-variant-numeric: tabular-nums; }
+.icon-svg { vertical-align: -2px; }
 .hint {
   margin: 4px 0 6px;
   min-height: 2.6em;

@@ -3,7 +3,7 @@ import type { ResultCard as Card } from '../shared/api';
 import { BUILDING_BY_ID } from '../shared/catalog';
 import { formatTime } from '../shared/scoring';
 import type { Puzzle } from '../shared/types';
-import { Face } from './art';
+import { Face, FlameIcon } from './art';
 import { Board } from './Board';
 import { platform } from './platform';
 import { wishStatuses } from './state';
@@ -81,7 +81,9 @@ export const ResultCard = ({ puzzle, card, journeyId }: Props) => {
         </div>
         <div>
           <dt>streak</dt>
-          <dd data-testid="streak">🔥 {card.streak}</dd>
+          <dd data-testid="streak">
+            <FlameIcon size={15} /> {card.streak}
+          </dd>
         </div>
       </dl>
       {card.flair && (

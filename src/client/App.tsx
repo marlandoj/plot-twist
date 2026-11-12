@@ -5,7 +5,7 @@ import { buildCandidate, WEEKDAY_NAMES } from '../shared/generator';
 import { wishText } from '../shared/rules';
 import { formatTime } from '../shared/scoring';
 import type { Puzzle } from '../shared/types';
-import { BuildingArt, Face } from './art';
+import { BuildingArt, ClockIcon, Face, FlameIcon } from './art';
 import { Board, moodFor } from './Board';
 import { platform } from './platform';
 import { ResultCard } from './ResultCard';
@@ -20,7 +20,9 @@ const Clock = ({ state }: { state: BuildState }) => {
     const id = setInterval(() => tick((n) => n + 1), 1000);
     return () => clearInterval(id);
   }, [state.startedAt]);
-  return <span className="clock" aria-label="time">⏱ {formatTime(elapsed(state, platform.now()))}</span>;
+  return <span className="clock" aria-label="time">
+      <ClockIcon /> {formatTime(elapsed(state, platform.now()))}
+    </span>;
 };
 
 const Game = ({ init, puzzle, onDone }: { init: InitResponse; puzzle: Puzzle; onDone: (c: Card) => void }) => {
@@ -65,7 +67,12 @@ const Game = ({ init, puzzle, onDone }: { init: InitResponse; puzzle: Puzzle; on
         <span className="wordmark">Plot Twist</span>
         <span className="muted">{WEEKDAY_NAMES[puzzle.difficulty]}</span>
         <span className="spacer" />
-        {init.streak > 0 && <span aria-label="streak">🔥{init.streak}</span>}
+        {init.streak > 0 && (
+          <span className="streak" aria-label={`${init.streak}-day streak`}>
+            <FlameIcon />
+            {init.streak}
+          </span>
+        )}
         <Clock state={state} />
       </header>
       <p className="hint" role="status" aria-live="polite">
@@ -84,7 +91,7 @@ const Game = ({ init, puzzle, onDone }: { init: InitResponse; puzzle: Puzzle; on
       </div>
       {ready ? (
         <button className="btn primary open" onClick={openTown} disabled={opening}>
-          {opening ? 'Cutting the ribbon…' : `Open the town ✂️  ${met}/${total} wishes`}
+          {opening ? 'Cutting the ribbon…' : `Open the town · ${met}/${total} wishes`}
         </button>
       ) : (
         <div className="tray" role="toolbar" aria-label="Buildings">

@@ -87,8 +87,8 @@ export const Board = ({ puzzle, placement, statuses, selected = null, ghost = nu
                 <Face
                   look={puzzle.residents[slot]!.look}
                   mood={moodFor(statuses[slot] ?? [])}
-                  size={36}
-                  x={64}
+                  size={40}
+                  x={62}
                   y={0}
                 />
               </>
