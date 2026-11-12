@@ -6,7 +6,7 @@ Plot Twist is built as a Devvit Web app (React, SVG, Hono; Devvit 0.15.3, laid o
 
 ## files_changed
 
-All new; the repo was created from scratch with `git init`. 8 commits on `main`.
+All new; the repo was created from scratch with `git init`. 6 commits on `main`.
 
 - Root: `package.json`, `package-lock.json`, `devvit.json`, `vite.config.ts`, `vitest.config.ts`, `tsconfig.json`, `tools/tsconfig.*.json` (from the official template), `.gitignore`, `.prettierrc`, `LICENSE`, `README.md`, `STRETCH.md`, `RESULT.md`
 - `src/shared/`: `catalog.ts`, `grid.ts`, `rng.ts`, `types.ts`, `rules.ts` (12 rules), `solver.ts`, `generator.ts` (seeded generator, gates, weekday ramp), `scoring.ts`, `streak.ts`, `flair.ts`, `textmap.ts`, `suggestions.ts` (wish grammar), `api.ts`
