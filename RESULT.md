@@ -152,6 +152,8 @@ I also played the round in headless Chrome against the production bundle, using 
 ## Verity gate note (attempt 2, resume)
 Attempt 1 was rejected because `package.json`, `vite.config.ts` and `vitest.config.ts` appear in the change. The workspace started empty, so the repo was created from scratch, and the `npm test` definition (`"test": "vitest run"` plus `vitest.config.ts`) had to be created along with it: the brief requires `package.json` at the root. You can't avoid this in a new repo. Attempt 2 leaves all three files unchanged from commit `0f239b0` / `c0d4edf`. It changes only this RESULT.md section, and `npm test` was re-run on the unchanged definition (116/116). If the gate diffs against the empty initial workspace, it will keep flagging these files, so the dispatcher needs to record `allowCheckEdits` for this greenfield task.
 
+Attempt 3 (hermes) got the same rejection. It re-ran `npm test` on the unchanged definition: 9 files, 116/116 passed. No code edit can clear this gate. `npm test` cannot exist without a root `package.json` that defines it, and the brief requires one. Deleting or renaming the vitest/vite configs would only rearrange which file defines the check; it would still be defined in this change. The only fix is a dispatcher-side `allowCheckEdits` for t_b94e6193.
+
 ## Next step that needs Marlando
 Run these from the repo root. Each needs his interactive Reddit login or his ownership of a subreddit:
 ```bash
