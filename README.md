@@ -28,6 +28,8 @@ npm run test:types    # tsc --build
 npm run queue -- 2026-11-12
 npm run bundle-report # vite build + sizes
 npm run login         # devvit login (needs the owner's Reddit account)
+npm run preview       # standalone web preview (preview/standalone.ts): the real client + core
+                      # logic on in-memory ports, for playtesting outside Reddit
 npm run dev           # devvit playtest <test subreddit>
 npm run deploy        # types + tests + devvit upload
 ```
